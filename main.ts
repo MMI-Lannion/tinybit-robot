@@ -198,8 +198,6 @@ namespace robot {
     // ----------
 
     function motorRun(direction = Direction.Run, step = 1) {
-        basic.showNumber(_mode);
-
         if (_mode === Mode.Safe) {
             Tinybit.CarCtrlSpeed(direction as any, _speed);
             basic.pause(Math.min(step, _maxStep) * _stepUnit);
@@ -227,7 +225,6 @@ namespace robot {
 
     function setPwmMotor(d: number, speed1: number, speed2: number, step = 1) {
         if (d < 0 || d > 7) return;
-        basic.showNumber(_mode);
 
         if (_mode === Mode.Safe) {
             Tinybit.CarCtrlSpeed2(d, speed1, speed2);
