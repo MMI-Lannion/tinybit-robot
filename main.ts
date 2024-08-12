@@ -1,3 +1,4 @@
+//% color="#D063CF" icon="\uf1b9" block="Tiny Robot"
 namespace robot {
     export enum Mode {
         Safe = 0,
@@ -172,7 +173,7 @@ namespace robot {
 
     //% block
     //% maxStep.defl=3
-    //% maxStep.min=1 maxStep.max=10
+    //% maxStep.min=1 maxStep.max=5
     //% group="Setters"
     export function setMaxStep(maxStep: number) {
         _maxStep = maxStep;
